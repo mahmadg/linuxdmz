@@ -1,0 +1,50 @@
+============= SPLUNK =============  
+
+
+ (Server)
+
+> yum -y install splunk-8.1.0.1-24fd52428b5a-linux-2.6-x86_64.rpm
+
+> cd /opt/splunk/bin/
+
+> ./splunk start
+
+> cd splunk/
+
+> cd bin
+
+> ./splunk start
+
+> firewall-cmd --list-all
+
+> firewall-cmd --add-port=8000/tcp --permanent
+
+> firewall-cmd --add-port=9000/tcp --permanent
+
+> firewall-cmd --reload
+
+>
+
+
+
+
+(Client)
+
+> wget -O splunkforwarder-8.1.0-f57c09e87251-linux-2.6-x86_64.rpm 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=8.1.0&product=universalforwarder&filename=splunkforwarder-8.1.0-f57c09e87251-linux-2.6-x86_64.rpm&wget=true'
+
+
+> yum -y install splunkforwarder-8.1.0-f57c09e87251-linux-2.6-x86_64.rpm
+
+> cd /opt
+
+> cd splunkforwarder/
+
+> cd bin
+
+> ./splunk start
+
+> ./splunk add forward-server 192.168.1.138:9000
+
+> ./splunk add monitor /var/log
+
+
