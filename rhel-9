@@ -1,0 +1,3 @@
+rhel-9
+no-root-login
+network config file path: /etc/NetworkManager
