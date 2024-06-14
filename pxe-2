@@ -1,0 +1,20 @@
+yum -y install httpd syslinux tftp-server xinetd dhcp*
+firewall-cmd --add-service=http
+firewall-cmd --reload
+mount /dev/cdrom /mnt
+cp -var /mnt/* /var/www/rhel7/
+chmod -R 755 /var/www/rhel7
+vim /etc/httpd/conf.d/pxe.conf
+Alias /rhel7 /var/www/rhe17/
+<Directory / var/www/rhel7/>
+Options Indexes FollowSymLinks
+Order Deny, Allow
+Allow from all
+</Directory>
+cp -a /usr/share/syslinux/* /var/lib/tftpboot/
+mkdir /var/lib/tftpboot/rhel7
+cp /mnt/images/pxeboot/vmlinuz /var/lib/tftpboot/rhel7/
+cp /mnt/images/pxeboot/initrd.img /var/lib/tftpboot/rhel7/
+mkdir /var/lib/tftpboot/pxelinux.cfg
+cd /var/lib/tftpboot/pxelinux.cfg
+vim defaults
