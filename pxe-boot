@@ -1,0 +1,37 @@
+1-DHCP Srver configuration
+port 67
+>yum -y install dhcpd
+
+>vim /etc/dhcp/dhcpd.conf
+authoritative;
+default-lease-time 600;
+max-lease-time 7200;
+allow booting;
+allow bootp;
+
+
+subnet 192.168.1.0 netmask 255.255.255.0 {
+range 192.168.1.115 192.168.1.120;
+next-server 192.168.1.210;
+filename "pxelinux.0";
+}
+
+
+2-TFTP Server Configuration
+port 69
+>yum -y install tftp vsftpd tftp-server
+
+>vim /etc/xineted.d/tftp
+#change disabled =no
+>cp /usr/share/syslinux/* /var/lib/tftpboob
+>cd /var/lib/tftpboot
+>mkdir pxelinux.cfg
+pxelinux.cfg > touch default
+>vim default
+prompt 0
+timeout 30
+MENU TITLE IEEE.EDU PXE Menu
+LABEL Centos7
+MENU LABEL Krishan
+KERNEL vmlinuz
+APPEND initrd=initrd.img inst.repo=ftp://192.168.1210/pub ks=http://192.168.1.210/ks.cfg 
