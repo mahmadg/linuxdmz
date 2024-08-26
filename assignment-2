@@ -1,0 +1,60 @@
+Find available IP
+Spin up a new vm
+192.168.1.<New IP>
+Set hostname jump-server
+Install epel-release
+update the kernel
+reboot
+create ssh key and copy on jump server
+create a new file system 
+name: /project-2022
+size: 2GB
+create links to /var/log/messages , secure in /project-2022
+add users:
+john , suny , maria
+assign password to each user
+create directory john-work , suny-work , maria-work under /project-2022
+create assignment-<user>.txt file in each directory
+Assign ownership to each directory and file
+Set permission recursively 755 to each directory
+open a duplicate session and login as suny and take exit
+Install below Packages:
+tree , telnet 
+Extend /var by 1GB
+create groups linuxadmin , sysadmin
+
+make each user part of these groups
+make a file system of 3GB /dump on jump server (if already ignore this step)
+nullify /dump
+copy (john-work , suny-work , maria-work) to /dump on jump server
+-----------------------
+Make this host NFS server 
+share /project-2022 with jump server
+check from client side wether is available or not
+
+------------------------
+create a new file system of 2G /reports
+share with jump server
+
+----------- report: ------------
+
+hostname=
+NIC name=
+How long server is up and running?
+When host was rebooted in which runlevel?
+kernel list:
+Kernel running:
+CPU:
+Memory:
+
+
+At what time user john was created? 
+At what time user maria was created?
+At what time Suny logged in?
+At what time 1GB disk was added?
+
+----------------------
+install git
+copy ssh key on github
+
+It is on Github now
