@@ -1,9 +1,9 @@
 Find available IP
 Spin up a new vm
 192.168.1.<New IP>
-Set hostname
+Set hostname jump-server
 Install epel-release
-update the system
+update the kernel
 reboot
 create ssh key and copy on jump server
 create a new file system 
