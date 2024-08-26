@@ -3,27 +3,26 @@ Spin up a new vm
 192.168.1.<New IP>
 Set hostname jump-server
 Install epel-release
-update the kernel
+update kernel
 reboot
-create ssh key and copy on jump server
+generate ssh key
 create a new file system 
-name: /project-2022
+name: /dmz2024
 size: 2GB
-create links to /var/log/messages , secure in /project-2022
-add users:
+create links to /var/log/messages , /var/log/secure in /dmz2024
+add below users and assign them password
 john , suny , maria
-assign password to each user
-create directory john-work , suny-work , maria-work under /project-2022
+create directory john-work , suny-work , maria-work under /dmz2024
 create assignment-<user>.txt file in each directory
-Assign ownership to each directory and file
+Assign ownership recursively to each directory
 Set permission recursively 755 to each directory
 open a duplicate session and login as suny and take exit
 Install below Packages:
 tree , telnet 
 Extend /var by 1GB
 create groups linuxadmin , sysadmin
-
 make each user part of these groups
+
 make a file system of 3GB /dump on jump server (if already ignore this step)
 nullify /dump
 copy (john-work , suny-work , maria-work) to /dump on jump server
