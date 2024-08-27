@@ -1,5 +1,5 @@
 Find available IP
-Spin up a new vm
+Spin a new vm
 192.168.1.<New IP>
 Set hostname jump-server
 Install epel-release
@@ -37,8 +37,6 @@ kernel list:
 Kernel running:
 CPU:
 Memory:
-
-
 At what time user john was created? 
 At what time user maria was created?
 At what time Suny logged in?
