@@ -7,17 +7,18 @@ schedule a cron to update kernel and then reboot
 generate ssh key
 connect with Github
 make this host control node
+create file system /london 2G through Ansible playbook
 
 
 ----------- Server 2 ------------
 spin vm through kickstart
-
+create file system /sydney 3G through Ansible playbook
+add NIC with "ActiveBackup" runner
 
 ----------- Server 3 ------------
 spin vm through kickstart
+create file system /hollywood 5G through Ansible playbook
 
 
 
-
-----------------------
 
