@@ -3,8 +3,7 @@ Spin up a new vm
 192.168.1.<New IP>
 Set hostname jump-server
 Install epel-release
-update kernel
-reboot
+schedule a cron to update kernel and then reboot
 create ssh key and copy on jump server
 create a new file system 
 name: /dmz2024
