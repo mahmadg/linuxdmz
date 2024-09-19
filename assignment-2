@@ -1,10 +1,8 @@
 Find available IP
 Spin up a new vm
-192.168.1.211
-Set hostname jump-server99
-Install epel-release
+Set hostname jump-server
+Make it control node
 schedule a cron to update kernel and then reboot
-generate ssh key
 connect with Github
 make this host control node
 create file system /london 2G through Ansible playbook
