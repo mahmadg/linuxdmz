@@ -23,7 +23,7 @@ Extend /var by 1GB
 create groups linuxadmin , sysadmin
 make each user part of these groups
 copy (john-work , suny-work , maria-work) to /tmp
------------------------
+----------- Section 2 ------------
 spin a new vm 
 Make this host NFS server
 create a space of 3G /p2023 and share with jump server
