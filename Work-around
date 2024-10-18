@@ -31,3 +31,4 @@ Work Around
 https://www.youtube.com/watch?v=skTiK_6DdqU
 > find / -name (-iname) ifcfg-* -type f -user root -perm 644 (u=x) -mtime -7 -size 0 (-empty)(50M) -newer last.txt
 > find /tmp -type f -size +1M -size -50M
+> find /tmp -type f 
