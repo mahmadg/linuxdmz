@@ -26,3 +26,7 @@ yum -y update
 yum -y update - -skip-broken
 yum -y update --security --exclude-kernel*
 
+
+
+
+https://www.youtube.com/watch?v=0G5MGoAi5vg
