@@ -1,1 +1,28 @@
+Through RedHat Satellite
+
+subscription-manager register --username admin-example --password secret
+Subscription-manager register –username admin –password hello123
+
 > yum -y update
+
+/etc/yum.repos.d/
+/etc/yum.conf
+At the end of /etc/yum.conf you can add 
+exclude=http* python* 
+
+history | grep yum
+yum history list all
+yum history package-info httpd
+yum history package-list httpd
+yum history info httpd
+yum history summary httpd
+yum check-update
+yum check-update kernel
+yum list update kernel
+yum provides http
+rpm -qa --last
+rpm -va --nofiles --nodigest
+yum -y update
+yum -y update - -skip-broken
+yum -y update --security --exclude-kernel*
+
