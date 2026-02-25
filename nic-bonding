@@ -1,3 +1,4 @@
+https://www.youtube.com/watch?v=rPcsKL1uh3A
 In vcenter using add network adapter add a new network card.
 Generate a uid for the new card by using uuidgen ens224
 cp /etc/sysconfig/network-scripts/ifcfg-ens192 /etc/sysconfig/network-scripts/ifcfg-ens224
